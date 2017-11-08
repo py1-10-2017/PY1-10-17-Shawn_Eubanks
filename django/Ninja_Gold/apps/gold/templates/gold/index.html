@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static "gold/ninja.css" %}">
+  <title>Ninja Gold</title>
+</head>
+<body>
+  <div class="wrapper">
+    <h3>Your Gold: {{ gold }}</h3>
+    <div class="place">
+      <h1>Farm</h1>
+      <p>(earns 10 - 20 gold)</p>
+      <form action="/process_money" method='post'>
+        {% csrf_token %}
+        <input type="hidden" name="location" value="farm">
+        <input type="submit" value="Find Gold!">
+      </form>
+    </div>
+    <div class="place">
+      <h1>Cave</h1>
+      <p>(earns 5 - 10 gold)</p>
+      <form action="/process_money" method='post'>
+        {% csrf_token %}
+        <input type="hidden" name="location" value="cave">
+        <input type="submit" value="Find Gold!">
+      </form>
+    </div>
+    <div class="place">
+      <h1>House</h1>
+      <p>(earns 2 - 5 gold)</p>
+      <form action="/process_money" method='post'>
+        {% csrf_token %}
+        <input type="hidden" name="location" value="house">
+        <input type="submit" value="Find Gold!">
+      </form>
+    </div>
+    <div class="place">
+      <h1>Casino</h1>
+      <p>(earns/takes 0 - 50 gold)</p>
+      <form action="/process_money" method='post'>
+        {% csrf_token %}
+        <input type="hidden" name="location" value="casino">
+        <input type="submit" value="Find Gold!">
+      </form>
+    </div>
+    <div class="output">
+      <fieldset>
+        <legend>Log</legend>
+        <ul>
+          {% for x in log %}
+            <li>{{ log.x }}</li>
+          {% endfor %}
+        </ul>
+      </fieldset>
+      <form action="/reset" method="post">
+        {% csrf_token %}
+        <input type="submit" name="reset" value="RESET" class="reset">
+      </form>
+    </div>
+  </div>
+</body>
+</html>

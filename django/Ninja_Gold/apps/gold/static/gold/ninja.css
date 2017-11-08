@@ -1,0 +1,31 @@
+.wrapper {
+    width: 100%;
+}
+
+.place {
+    width: 24%;
+    text-align: center;
+    display: inline-block;
+    margin: auto;
+    border: 2px solid black;
+}
+
+.output {
+    width: 100%;
+} 
+
+fieldset {
+    max-height: 400px;
+    padding-top: 1em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 0;
+    scroll-behavior: smooth;
+    margin: 2em 0;
+}
+
+.reset {
+    text-align: center;
+    background-color: red;
+    color: white;
+}
