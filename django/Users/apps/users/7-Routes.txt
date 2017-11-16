@@ -1,0 +1,25 @@
+7 routes:
+
+GET /users (get all users) -> SELECT * FROM users 
+                                = User.objects.all()
+
+GET /users/(?P<user_id>\d+) (get user by id) -> SELECT * FROM users WHERE id = user_id 
+                                = User.objects.get(id=user_id)
+
+POST /users/create (post new user) -> INSERT INTO users (column1...) VALUES (val1....)
+                                = User.objects.create(column1=value1...)
+
+POST /users/(?P<user_id>\d+)/edit (edit user) -> UPDATE users Column1=Value1, ... WHERE id = users_id
+                                user = User.objects.get(id=users_id)
+                                user.column1=value1
+                                user.column2=value2
+                                ....
+                                user.save()
+
+GET /users/new (get all users) -> shows html 
+
+GET /users.(?P<user_id>\d+)/edit (get all users) -> SELECT * FROM users WHERE id = user_id
+                                = User.objects.get(id)
+
+POST /users(?P<user_id>\d+)/delete (delete user) -> Delete FROM users WHERE id = user_id 
+                                = User.objects.get(id=user_id).delete()                                
