@@ -1,0 +1,43 @@
+table {
+    border-collapse: collapse;
+    margin: 20px 0px;
+}
+table, th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+.error{
+  color: red;
+}
+label{
+  margin: 10px;
+  display: inline-block;
+  vertical-align: top;
+  width: 100px;
+  text-align: right;
+}
+input, textarea {
+  margin: 10px;
+  display: inline-block;
+}
+
+.submit{
+  margin: 10px 20px;
+}
+
+#confirm.form.submit{
+    display: inline;
+    margin: 0 10px;
+}
+
+.green-btn{
+    background-color: green;
+}
+
+.red-btn{
+    background-color: red;
+}
+
+.red{
+    color: red;
+}
