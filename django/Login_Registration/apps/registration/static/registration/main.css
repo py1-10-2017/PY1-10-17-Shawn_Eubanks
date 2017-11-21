@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+  }
+
+  #login_wrapper, #registration_wrapper{
+    width: 20%;
+    margin: 5% 12%;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  form{
+    margin: 0px;
+    margin-top: 20px
+  }
+
+  #output_wrapper{
+    width: 400px;
+    margin: 10px;
+    padding: 20px;
+  }
+
+  h3{
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
+  .error{
+    color: red;
+    margin: 10px;
+  }
+  
+  .green{
+    color: green;
+    margin: 10px 0px;
+  }
+
+  
